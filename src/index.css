@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --color-kpu-navy: #102148;
+  --color-kpu-navy-deep: #09152f;
+  --color-kpu-navy-text: #0a142b;
+  --color-kpu-navy-button: #0d1a39;
+  --color-kpu-gold: #e0c130;
+  --color-kpu-gold-bright: #ffc300;
+  --color-kpu-gold-highlight: #ffd900;
+  --color-kpu-cream: #fff5da;
+  --radius-kpu-shell: 15px;
+  --radius-kpu-card: 10px;
+  --radius-kpu-button: 11px;
+  --radius-kpu-nav: 13px;
+  --radius-kpu-number: 8px;
+}
+
+:root {
+  --app-width: 390px;
+  --gradient-header: linear-gradient(
+    -90deg,
+    #bf7530 0%,
+    #d6ba40 50%,
+    #bf7530 100%
+  );
+  --gradient-button: linear-gradient(
+    176deg,
+    #e0c130 27.5%,
+    #cdaf1e 76.7%
+  );
+  --gradient-glass: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  --gradient-content: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  --gradient-status: linear-gradient(
+    180deg,
+    rgba(131, 128, 92, 0.69) 0%,
+    rgba(131, 128, 92, 0.48) 85.6%
+  );
+}
+
+body {
+  margin: 0;
+  background: #102148;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.bg-kpu-header {
+  background: var(--gradient-header);
+}
+
+.bg-kpu-button {
+  background: var(--gradient-button);
+}
+
+.bg-kpu-glass {
+  background: var(--gradient-glass);
+}
+
+.bg-kpu-content {
+  background: var(--gradient-content);
+}
+
+.bg-kpu-status {
+  background: var(--gradient-status);
+}
+
+.border-kpu-cream {
+  border-color: var(--color-kpu-cream);
+}
+
+.shadow-kpu-shell {
+  box-shadow: 0 0 7.6px rgba(0, 0, 0, 0.25);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}

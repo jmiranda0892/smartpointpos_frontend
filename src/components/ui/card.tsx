@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/cn'
 
-const cardVariants = cva('rounded-[10px] border-[0.3px] border-white', {
+const cardVariants = cva('rounded-kpu-card border-[0.3px] border-white', {
   variants: {
     variant: {
       glass: 'bg-kpu-glass',

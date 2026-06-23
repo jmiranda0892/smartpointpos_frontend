@@ -10,7 +10,7 @@ export function NumberBox({
   return (
     <div
       className={cn(
-        'flex h-[67px] w-[66px] items-center justify-center rounded-[8px] bg-kpu-gold',
+        'flex h-[4.1875rem] w-[4.125rem] items-center justify-center rounded-kpu-number bg-kpu-gold',
         className,
       )}
     >

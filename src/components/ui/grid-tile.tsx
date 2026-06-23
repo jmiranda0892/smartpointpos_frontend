@@ -18,13 +18,13 @@ export function GridTile({
 }) {
   return (
     <Link to={to} className={cn('block', className)}>
-      <Card className="flex h-[106px] flex-col items-center justify-center gap-1.5 px-2 py-3 text-center">
+      <Card className="flex h-[6.625rem] flex-col items-center justify-center gap-1.5 px-2 py-3 text-center">
         <TileIcon name={icon} />
         <div>
           <p className="text-sm font-extrabold leading-tight text-white">
             {title}
           </p>
-          <p className="mt-1 text-xs font-normal leading-none tracking-[-0.03em] text-white/90">
+          <p className="mt-0.5 text-[0.8125rem] font-semibold leading-none tracking-[-0.03em] text-white/90">
             {subtitle}
           </p>
         </div>

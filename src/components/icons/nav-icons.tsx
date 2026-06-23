@@ -50,6 +50,13 @@ const icons: Record<
   },
 }
 
+function iconRem(w: number, h: number) {
+  return {
+    width: `${w / 16}rem`,
+    height: `${h / 16}rem`,
+  }
+}
+
 export function NavIcon({
   name,
   active,
@@ -65,9 +72,8 @@ export function NavIcon({
       src={active ? meta.active : meta.inactive}
       alt=""
       aria-hidden
-      width={meta.w}
-      height={meta.h}
-      className={cn('block shrink-0', className)}
+      className={cn('block shrink-0 object-contain', className)}
+      style={iconRem(meta.w, meta.h)}
       draggable={false}
     />
   )

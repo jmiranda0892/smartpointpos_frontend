@@ -7,8 +7,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'h-8 w-full max-w-[276px] rounded-[11px] bg-kpu-button text-xs text-kpu-navy-button',
-        open: 'h-[21px] min-w-[55px] rounded-[5px] bg-kpu-button px-2.5 text-[9px] text-kpu-navy-button',
+          'h-8 w-full max-w-[17.25rem] rounded-kpu-button bg-kpu-button text-xs text-kpu-navy-button',
+        open: 'h-[1.3125rem] min-w-[3.4375rem] rounded-[0.3125rem] bg-kpu-button px-2.5 text-[0.5625rem] text-kpu-navy-button',
       },
     },
     defaultVariants: {

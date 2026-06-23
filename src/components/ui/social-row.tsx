@@ -17,7 +17,7 @@ export function SocialRow({
   }
 
   return (
-    <Card className="flex h-[44px] items-center justify-between px-3 py-2">
+    <Card className="flex h-[2.75rem] items-center justify-between px-3 py-2">
       <div className="flex items-center gap-2.5">
         <SocialIcon name={icon} className="size-5 shrink-0" />
         <span className="text-sm font-extrabold text-white">{platform}</span>

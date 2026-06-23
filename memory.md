@@ -117,3 +117,4 @@ Priority within screens if incremental: **Shell → Home → Números → Redes 
 | 2026-06-21 | Initial spec from Figma Group 989; docs scaffold created; repo empty |
 | 2026-06-21 | Docs: README, agent.md, memory.md, docs/*, .cursor/rules/kpu.mdc |
 | 2026-06-21 | v0.1 implemented: Vite+React+Tailwind PWA, 6 views, mock API, PayPal stub |
+| 2026-06-23 | Mobile scale: JS sets `html` font-size from visualViewport + screen height; ref 390×760, max 1.28× |

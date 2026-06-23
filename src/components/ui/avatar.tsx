@@ -10,11 +10,11 @@ export function Avatar({
   return (
     <div
       className={cn(
-        'flex size-[73px] items-center justify-center rounded-full border border-kpu-cream/60 bg-black shadow-sm',
+        'flex size-[4.5625rem] items-center justify-center rounded-full border-[0.21875rem] border-kpu-cream bg-kpu-navy-deep shadow-sm',
         className,
       )}
     >
-      <span className="text-[23px] font-extrabold tracking-[-0.04em] text-kpu-gold-bright">
+      <span className="text-[1.4375rem] font-extrabold tracking-[-0.04em] text-kpu-gold-bright">
         {initials}
       </span>
     </div>

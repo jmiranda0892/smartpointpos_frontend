@@ -5,14 +5,14 @@ export function AppHeader() {
   const { brand } = siteConfig
 
   return (
-    <header className="shrink-0 bg-kpu-header px-3 pb-3 pt-4">
+    <header className="shrink-0 bg-kpu-header px-3 pb-3 pt-[max(1rem,env(safe-area-inset-top))]">
       <div className="flex flex-col items-center gap-2.5">
         <Avatar initials={brand.initials} />
         <div className="text-center">
-          <h1 className="text-[23px] font-extrabold leading-tight tracking-[-0.04em] text-kpu-navy-deep">
+          <h1 className="text-[1.4375rem] font-extrabold leading-tight tracking-[-0.04em] text-kpu-navy-deep">
             {brand.name}
           </h1>
-          <p className="mt-1 text-xs font-normal leading-snug tracking-[-0.03em] text-kpu-navy">
+          <p className="mt-1 text-[0.8125rem] font-medium leading-snug tracking-[-0.03em] text-kpu-navy">
             {brand.tagline}
           </p>
         </div>

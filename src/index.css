@@ -10,15 +10,19 @@
   --color-kpu-gold-bright: #ffc300;
   --color-kpu-gold-highlight: #ffd900;
   --color-kpu-cream: #fff5da;
-  --radius-kpu-shell: 15px;
-  --radius-kpu-card: 10px;
-  --radius-kpu-button: 11px;
-  --radius-kpu-nav: 13px;
-  --radius-kpu-number: 8px;
+  --radius-kpu-shell: 0.9375rem;
+  --radius-kpu-card: 0.625rem;
+  --radius-kpu-button: 0.6875rem;
+  --radius-kpu-nav: 0.8125rem;
+  --radius-kpu-number: 0.5rem;
 }
 
 :root {
   --app-width: 390px;
+  --kpu-design-w: 390;
+  --kpu-design-h: 760;
+  --kpu-base-px: 16;
+  --kpu-scale-max: 1.28;
   --gradient-header: linear-gradient(
     -90deg,
     #bf7530 0%,
@@ -37,8 +41,8 @@
   );
   --gradient-content: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.2) 100%
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(16, 33, 72, 0) 100%
   );
   --gradient-status: linear-gradient(
     180deg,
@@ -49,12 +53,21 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: #102148;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
+/* ponytail: mobile scale applied in JS (visualViewport); desktop fixed here */
+@media (min-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 #root {
+  height: 100dvh;
   min-height: 100dvh;
 }
 
@@ -71,7 +84,7 @@ body {
 }
 
 .bg-kpu-content {
-  background: var(--gradient-content);
+  background: var(--gradient-content), var(--color-kpu-navy);
 }
 
 .bg-kpu-status {

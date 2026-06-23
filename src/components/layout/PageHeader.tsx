@@ -8,7 +8,7 @@ export function PageHeader({
   subtitle?: string
 }) {
   return (
-    <div className="mb-4 text-center">
+    <div className="mb-4 mt-3.5 text-center">
       <h2 className="text-lg font-extrabold leading-tight text-kpu-gold-bright">
         {title}
       </h2>
@@ -23,5 +23,7 @@ export function PageHeader({
 
 /** Scroll area wrapper for page sections (shell border lives in AppLayout) */
 export function PageContent({ children }: { children: ReactNode }) {
-  return <div className="flex flex-col">{children}</div>
+  return (
+    <div className="flex min-h-full flex-1 flex-col">{children}</div>
+  )
 }

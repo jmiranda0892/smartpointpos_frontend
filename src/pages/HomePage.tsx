@@ -23,14 +23,14 @@ export function HomePage() {
         ))}
       </div>
 
-      <Card variant="status" className="mt-3 border-[0.3px] border-white/30 px-3.5 py-3">
+      <Card variant="status" className="mt-auto border-[0.3px] border-white/30 px-3.5 py-3">
         <p className="text-xs tracking-[-0.03em] text-white/90">
           {siteConfig.home.statusLabel}
         </p>
         <p className="mt-1 text-sm font-extrabold text-kpu-gold-highlight">
           {statusLabel}
         </p>
-        <p className="mt-2 text-[11px] leading-snug tracking-[-0.03em] text-white/80">
+        <p className="mt-2 text-[0.6875rem] leading-snug tracking-[-0.03em] text-white/80">
           {siteConfig.legal.premiumUnlockNote}
         </p>
       </Card>

@@ -9,11 +9,21 @@ const icons: Record<TileIconName, { src: string; w: number; h: number }> = {
   book: { src: '/assets/icons/tile/book.svg', w: 18, h: 14 },
 }
 
+function iconRem(w: number, h: number, targetH: number) {
+  const heightRem = targetH / 16
+  return {
+    width: `${heightRem * (w / h)}rem`,
+    height: `${heightRem}rem`,
+  }
+}
+
 function TileGlyph({
   name,
+  targetH,
   className,
 }: {
   name: TileIconName
+  targetH: number
   className?: string
 }) {
   const meta = icons[name]
@@ -22,9 +32,8 @@ function TileGlyph({
       src={meta.src}
       alt=""
       aria-hidden
-      width={meta.w}
-      height={meta.h}
-      className={cn('block shrink-0', className)}
+      className={cn('block shrink-0 object-contain', className)}
+      style={iconRem(meta.w, meta.h, targetH)}
       draggable={false}
     />
   )
@@ -37,17 +46,17 @@ export function TileIcon({
   name: TileIconName
   className?: string
 }) {
-  return <TileGlyph name={name} className={cn('h-8 w-auto', className)} />
+  return <TileGlyph name={name} targetH={32} className={className} />
 }
 
 export function StarIcon({ className }: { className?: string }) {
-  return <TileGlyph name="pale" className={cn('h-10 w-auto', className)} />
+  return <TileGlyph name="pale" targetH={40} className={className} />
 }
 
 export function CrownIcon({ className }: { className?: string }) {
-  return <TileGlyph name="vip" className={cn('h-10 w-auto', className)} />
+  return <TileGlyph name="vip" targetH={40} className={className} />
 }
 
 export function BookIcon({ className }: { className?: string }) {
-  return <TileGlyph name="book" className={cn('h-10 w-auto', className)} />
+  return <TileGlyph name="book" targetH={40} className={className} />
 }
